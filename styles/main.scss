@@ -1,0 +1,46 @@
+@import 'styles/mixins.scss';
+@import 'styles/theme.scss';
+
+.btn-theme-primary {
+    @include themed-button($theme-primary, $theme-secondary);
+}
+
+.btn-theme-secondary {
+    @include themed-button($theme-secondary, $theme-primary);
+}
+
+.btn-theme-success {
+    @include themed-button($theme-success, white);
+}
+
+.btn-theme-error {
+    @include themed-button($theme-error, white);
+}
+
+.btn-theme-warning {
+    @include themed-button($theme-warning, white);
+}
+
+.layout-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: flex-start;
+
+    .layout-page-navbar {
+        div.navbar-nav {
+            a.active.nav-link {
+                color: $theme-secondary;
+                border-bottom: 2px solid $theme-secondary;
+            }
+        }
+    }
+
+    .layout-page-navbar-toggle {
+        border: none;
+    }
+
+    .layout-page-footer {
+        margin-top: auto;
+    }
+}
