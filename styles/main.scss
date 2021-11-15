@@ -21,13 +21,17 @@
     @include themed-button($theme-warning, white);
 }
 
+.btn-theme-dark {
+    @include themed-button($theme-dark, $theme-secondary);
+}
+
 .layout-page {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
     justify-content: flex-start;
 
-    .layout-page-navbar {
+    &__navbar {
         div.navbar-nav {
             a.active.nav-link {
                 color: $theme-secondary;
@@ -36,11 +40,43 @@
         }
     }
 
-    .layout-page-navbar-toggle {
+    &__navbar-toggle {
         border: none;
     }
 
-    .layout-page-footer {
+    &__footer {
         margin-top: auto;
+
+        &__button {
+            &--active {
+                color: $theme-secondary;
+            }
+        }
+    }
+}
+
+.content {
+    &__header-container {
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 350px;
+        &--home {
+            height: 400px;
+            background-image: linear-gradient(
+                    rgba(0, 0, 0, 0.5),
+                    rgba(0, 0, 0, 0.5)
+                ),
+                url('/images/headers/home.jpg');
+        }
+    }
+
+    &__card {
+        box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+
+        &--home-image-card {
+            min-height: 450px;
+        }
     }
 }

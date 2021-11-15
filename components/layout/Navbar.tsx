@@ -11,16 +11,16 @@ const Navbar = () => {
     return (
         <BootstrapNavbar bg="primary" expand="lg" className="py-4">
             <Container>
-                <BootstrapNavbar.Brand href="/">
-                    Demo Genius
-                </BootstrapNavbar.Brand>
+                <Link href="/" passHref>
+                    <BootstrapNavbar.Brand>Demo Genius</BootstrapNavbar.Brand>
+                </Link>
                 <BootstrapNavbar.Toggle
                     aria-controls="page-navbar"
-                    className="layout-page-navbar-toggle"
+                    className="layout-page__navbar-toggle"
                 />
                 <BootstrapNavbar.Collapse
                     id="page-navbar"
-                    className="layout-page-navbar"
+                    className="layout-page__navbar"
                 >
                     <Nav className="me-auto">
                         {routeArray.map(route => (

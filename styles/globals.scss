@@ -1,2 +1,6 @@
 @import 'styles/bootstrap-overrides.scss';
 @import 'styles/main.scss';
+
+body {
+    scroll-behavior: smooth;
+}
