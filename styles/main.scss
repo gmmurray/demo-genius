@@ -62,13 +62,16 @@
         background-position: center;
         background-repeat: no-repeat;
         height: 350px;
-        &--home {
+        &__jumbotron {
             height: 400px;
-            background-image: linear-gradient(
-                    rgba(0, 0, 0, 0.5),
-                    rgba(0, 0, 0, 0.5)
-                ),
-                url('/images/headers/home.jpg');
+            &--home {
+                @include header-background-image('home.jpg');
+            }
+        }
+        &__title {
+            &--services {
+                @include header-background-image('services.jpg');
+            }
         }
     }
 
@@ -77,6 +80,15 @@
 
         &--home-image-card {
             min-height: 450px;
+        }
+
+        &__responsive-rounded-start-image {
+            @include media-breakpoint-down(md) {
+                @include border-top-radius($border-radius);
+            }
+            @include media-breakpoint-up(md) {
+                @include border-start-radius($border-radius);
+            }
         }
     }
 }

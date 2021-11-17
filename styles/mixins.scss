@@ -10,3 +10,8 @@
         box-shadow: 0 0 0 0.1rem;
     }
 }
+
+@mixin header-background-image($filename) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url('/images/headers/' + $filename);
+}

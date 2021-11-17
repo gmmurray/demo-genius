@@ -2,29 +2,25 @@ import clsx from 'clsx';
 import type { NextPage } from 'next';
 import { Fragment } from 'react';
 import { Button, Container, Card, Row, Col, Form } from 'react-bootstrap';
+import PageHeader from '../components/shared/pageHeader/PageHeader';
+import { PageHeaderType } from '../components/shared/pageHeader/pageHeaderType';
 import { blockCn, elementCn, modifierCn } from '../lib/helpers/bem';
 
 const contentCn = blockCn('content');
-const headerContainerCn = elementCn(contentCn, 'header-container');
-const imageCn = modifierCn(headerContainerCn, 'home');
 const cardCn = elementCn(contentCn, 'card');
 const imageCardCn = modifierCn(cardCn, 'home-image-card');
 
 const Home: NextPage = () => {
     return (
         <Fragment>
-            <div className={clsx(headerContainerCn, imageCn)}>
-                <Container className="mt-5">
-                    <h1 className="text-white display-3">
-                        This demo website uses modern web-technologies to
-                        display information and gain interest
-                    </h1>
-                    <h3 className="text-white">
-                        Interested in something similar for your small-business?
-                    </h3>
-                    <Button variant="theme-primary">Get started now</Button>
-                </Container>
-            </div>
+            <PageHeader
+                type={PageHeaderType.jumbotron}
+                modifierClassName="home"
+                onClick={() => {}}
+                title="This demo website uses modern web-technologies to display information and gain interest"
+                subtitle="Interested in something similar for your small-business?"
+                buttonText="Get started now"
+            />
             <Container>
                 <Row>
                     <Col xs={12}>
