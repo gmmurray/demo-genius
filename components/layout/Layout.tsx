@@ -1,4 +1,5 @@
-import { FC, Fragment } from 'react';
+import { FC } from 'react';
+import DemoDisclaimer from './DemoDisclaimer';
 import Footer from './Footer';
 import Navbar from './Navbar';
 import Page from './Page';
@@ -9,6 +10,7 @@ const Layout: FC<LayoutProps> = ({ children }) => {
     return (
         <Page>
             <Navbar />
+            <DemoDisclaimer />
             {children}
             <Footer />
         </Page>
