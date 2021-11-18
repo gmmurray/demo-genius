@@ -6,6 +6,7 @@ import { routeArray } from '../../lib/routes/routes';
 import { useRouter } from 'next/router';
 import clsx from 'clsx';
 import { elementCn, modifierCn } from '../../lib/helpers/bem';
+import { personalWebsiteUrl } from '../../lib/constants/staticContent';
 
 const footerCn = elementCn('layout-page', 'footer');
 const footerButtonCn = elementCn(footerCn, 'button');
@@ -82,7 +83,12 @@ const Footer = () => {
                 <Row className="py-3">
                     <Col xs={12} className="text-center">
                         &copy; Copyright{' '}
-                        <a className="text-white" href="https://gregmurray.org">
+                        <a
+                            className="text-secondary"
+                            href={personalWebsiteUrl}
+                            target="_blank"
+                            rel="noreferrer"
+                        >
                             Greg Murray
                         </a>{' '}
                         {new Date().getFullYear()}
