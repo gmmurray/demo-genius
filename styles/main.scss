@@ -83,10 +83,10 @@
         }
 
         &__responsive-rounded-start-image {
-            @include media-breakpoint-down(md) {
+            @include media-breakpoint-down(lg) {
                 @include border-top-radius($border-radius);
             }
-            @include media-breakpoint-up(md) {
+            @include media-breakpoint-up(lg) {
                 @include border-start-radius($border-radius);
             }
         }

@@ -64,7 +64,7 @@ const Services: NextPage = () => {
                                     )}
                                 >
                                     <Row>
-                                        <Col xs={12} md={5}>
+                                        <Col xs={12} lg={5}>
                                             <Image
                                                 height="800"
                                                 width="1200"
@@ -77,7 +77,7 @@ const Services: NextPage = () => {
                                                 )}
                                             />
                                         </Col>
-                                        <Col xs={12} md={7}>
+                                        <Col xs={12} lg={7}>
                                             <Card.Body>
                                                 <Card.Text>
                                                     <h2 className="display-5">
