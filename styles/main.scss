@@ -41,7 +41,9 @@
     }
 
     &__navbar-toggle {
-        border: none;
+        &:focus {
+            border-color: $theme-secondary;
+        }
     }
 
     &__footer {
