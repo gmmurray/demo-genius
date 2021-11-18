@@ -1,14 +1,37 @@
-import clsx from 'clsx';
-import type { NextPage } from 'next';
+import { Button, Card, Col, Container, Form, Row } from 'react-bootstrap';
+import { blockCn, elementCn, modifierCn } from '../lib/helpers/bem';
+
 import { Fragment } from 'react';
-import { Button, Container, Card, Row, Col, Form } from 'react-bootstrap';
+import type { NextPage } from 'next';
 import PageHeader from '../components/shared/pageHeader/PageHeader';
 import { PageHeaderType } from '../components/shared/pageHeader/pageHeaderType';
-import { blockCn, elementCn, modifierCn } from '../lib/helpers/bem';
+import clsx from 'clsx';
 
 const contentCn = blockCn('content');
 const cardCn = elementCn(contentCn, 'card');
 const imageCardCn = modifierCn(cardCn, 'home-image-card');
+
+type FeatureCard = {
+    image: string;
+    title: string;
+    text: string;
+};
+const featureCards: FeatureCard[] = [
+    {
+        title: 'Fast',
+        image: 'images/lightning.jpg',
+        text: `                                        My websites are built using modern
+        web-technologies. This means fast load
+        times and quick reactivity on each page.`,
+    },
+    {
+        title: 'Mobile friendly',
+        image: 'images/mobile.jpg',
+        text: `                                        I build everything with responsive
+        design in mind, ensuring a comfortable
+        experience on mobile devices.`,
+    },
+];
 
 const Home: NextPage = () => {
     return (
@@ -60,45 +83,19 @@ const Home: NextPage = () => {
                     </Col>
                 </Row>
                 <Row>
-                    <Col xs={12} md={6}>
-                        <Card className={clsx(cardCn, imageCardCn, 'mt-4')}>
-                            <Card.Img
-                                variant="top"
-                                src="images/lightning.jpg"
-                            />
-                            <Card.Body>
-                                <Card.Title>
-                                    <h2 className="display-5">Fast</h2>
-                                </Card.Title>
-                                <Card.Text>
-                                    <h5>
-                                        My websites are built using modern
-                                        web-technologies. This means fast load
-                                        times and quick reactivity on each page.
-                                    </h5>
-                                </Card.Text>
-                            </Card.Body>
-                        </Card>
-                    </Col>
-                    <Col xs={12} md={6}>
-                        <Card className={clsx(cardCn, imageCardCn, 'mt-4')}>
-                            <Card.Img variant="top" src="images/mobile.jpg" />
-                            <Card.Body>
-                                <Card.Title>
-                                    <h2 className="display-5">
-                                        Mobile friendly
-                                    </h2>
-                                </Card.Title>
-                                <Card.Text>
-                                    <h5>
-                                        I build everything with responsive
-                                        design in mind, ensuring a comfortable
-                                        experience on mobile devices.
-                                    </h5>
-                                </Card.Text>
-                            </Card.Body>
-                        </Card>
-                    </Col>
+                    {featureCards.map(({ image, title, text }, index) => (
+                        <Col key={index} xs={12} md={6}>
+                            <Card className={clsx(cardCn, imageCardCn, 'mt-4')}>
+                                <Card.Img variant="top" src={image} />
+                                <Card.Body>
+                                    <Card.Title>
+                                        <h2 className="display-5">{title}</h2>
+                                    </Card.Title>
+                                    <Card.Text>{text}</Card.Text>
+                                </Card.Body>
+                            </Card>
+                        </Col>
+                    ))}
                 </Row>
                 <Row>
                     <Col xs={12}>
