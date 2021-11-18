@@ -46,7 +46,7 @@ const PageHeader: FC<PageHeaderProps> = ({
                     )}
                     {!!subtitle && <h3 className="text-white">{subtitle}</h3>}
                     {!!onClick && !!buttonText && (
-                        <Button variant="theme-primary" onClick={onClick}>
+                        <Button variant="theme-secondary" onClick={onClick}>
                             {buttonText}
                         </Button>
                     )}
