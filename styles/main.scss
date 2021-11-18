@@ -75,6 +75,9 @@
             &--about {
                 @include header-background-image('about.jpg');
             }
+            &--contact {
+                @include header-background-image('contact.jpg');
+            }
         }
     }
 
