@@ -63,7 +63,7 @@
         background-repeat: no-repeat;
         height: 350px;
         &__jumbotron {
-            height: 400px;
+            height: 450px;
             &--home {
                 @include header-background-image('home.jpg');
             }

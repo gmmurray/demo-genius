@@ -61,7 +61,7 @@ const PageHeader: FC<PageHeaderProps> = ({
 
     return (
         <div className={className}>
-            <Container className="mt-5">{renderContent()}</Container>
+            <Container className="mt-3 mt-md-5">{renderContent()}</Container>
         </div>
     );
 };
