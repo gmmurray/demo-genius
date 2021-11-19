@@ -1,0 +1,16 @@
+{
+    "name": "Demo Genius",
+    "short_name": "Demo Genius",
+    "icons": [
+        {
+            "src": "/icon-200x200.png",
+            "sizes": "200x200",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#ebaa02",
+    "background_color": "#000",
+    "start_url": "/",
+    "display": "standalone",
+    "orientation": "portrait"
+}

@@ -8,11 +8,18 @@ function MyApp({ Component, pageProps }: AppProps) {
         <Layout>
             <Head>
                 <title>Demo Genius</title>
+                <meta
+                    name="viewport"
+                    content="minimum-scale=1, initial-scale=1, width=device-width"
+                />
+                <meta name="theme-color" content="#ebaa02" />
                 <link
-                    rel="icon"
+                    rel="shortcut icon"
                     href="/icon-200x200.png"
                     type="image/png"
-                ></link>
+                />
+                <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+                <link rel="manifest" href="/manifest.json" />
             </Head>
             <Component {...pageProps} />
         </Layout>
