@@ -3,6 +3,7 @@ import Container from 'react-bootstrap/Container';
 import BootstrapNavbar from 'react-bootstrap/Navbar';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
+import Image from 'next/image';
 import { routeArray } from '../../lib/routes/routes';
 import { List } from 'react-bootstrap-icons';
 
@@ -14,7 +15,12 @@ const Navbar = () => {
             <Container>
                 <Link href="/" passHref>
                     <BootstrapNavbar.Brand className="text-white">
-                        <img src="/logo_with_name_square.png" />
+                        <Image
+                            src="/logo_with_name_square.png"
+                            height="50"
+                            width="200"
+                            alt="demo genius logo"
+                        />
                     </BootstrapNavbar.Brand>
                 </Link>
                 <BootstrapNavbar.Toggle
