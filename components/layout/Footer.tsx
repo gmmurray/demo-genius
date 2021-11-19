@@ -37,6 +37,7 @@ const Footer = () => {
                                         key={route.path}
                                         xs={12}
                                         md={12 / routeArray.length}
+                                        className="mb-2"
                                     >
                                         <Link href={route.path} passHref>
                                             <Button
