@@ -10,7 +10,7 @@ function MyApp({ Component, pageProps }: AppProps) {
                 <title>Demo Genius</title>
                 <link
                     rel="icon"
-                    href="/icon-192x192.png"
+                    href="/icon-200x200.png"
                     type="image/png"
                 ></link>
             </Head>

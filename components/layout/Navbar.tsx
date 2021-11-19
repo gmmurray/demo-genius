@@ -14,7 +14,7 @@ const Navbar = () => {
             <Container>
                 <Link href="/" passHref>
                     <BootstrapNavbar.Brand className="text-white">
-                        Demo Genius
+                        <img src="/logo_with_name_square.png" />
                     </BootstrapNavbar.Brand>
                 </Link>
                 <BootstrapNavbar.Toggle
